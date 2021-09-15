@@ -511,7 +511,7 @@ extension UILabel {
             var ascent: CGFloat = 0.0
             var descent: CGFloat = 0.0
             var leading: CGFloat = 0.0
-            let width = CGFloat(CTLineGetTypographicBounds(line, &ascent, &descent, &leading))
+            let width = CGFloat(UIScreen.main.bounds.width) //CGFloat(CTLineGetTypographicBounds(line, &ascent, &descent, &leading))
             let yMin = CGFloat(floor(lineOrigin.y - descent))
             let yMax = CGFloat(ceil(lineOrigin.y + ascent))
 
